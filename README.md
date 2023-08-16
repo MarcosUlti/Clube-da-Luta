@@ -1,2 +1,2 @@
-# SiteBacanaLegal
-Site pro Alura
+# Clube da Luta
+`Um site para o Curso Alura`
