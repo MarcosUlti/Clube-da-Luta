@@ -1,1 +1,159 @@
+@import url('https://fonts.cdnfonts.com/css/lilita-one');
 
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lilita One', Arial, Helvetica, sans-serif;
+    background-color: white;
+    color: black;
+    overflow-x: hidden;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #828282;
+    padding: 20px;
+    box-shadow: 0px 0px 30px 30px rgba(0, 0, 0, 0.871);
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+  }
+  
+  .toggle {
+    --width: 80px;
+    --height: calc(var(--width) / 2);
+    --border-radius: calc(var(--height) / 2);
+    display: inline-block;
+    cursor: pointer;
+    margin-left: 20px;
+  }
+  
+  .toggle__input {
+    display: none;
+  }
+  
+  .toggle__fill {
+    position: relative;
+    width: var(--width);
+    height: var(--height);
+    border-radius: var(--border-radius);
+    background: #ffffff;
+    transition: background 0.2s;
+    box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.557);
+  }
+  
+  .toggle__fill::after {
+    content: url(/assets/SPR_Sun.png);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: var(--height);
+    width: var(--height);
+    background: #ebebeb;
+    box-shadow: 0px 0px 30px 15px rgba(0, 0, 0, 0.919);
+    border-radius: var(--border-radius);
+    transition: transform 0.2s;
+  }
+  
+  .toggle__input:checked ~ .toggle__fill {
+    background: #000000;
+  }
+  
+  .toggle__input:checked ~ .toggle__fill::after {
+    content: url(/assets/SPR_Moon.png);
+    transform: translateX(var(--height));
+  }
+
+  .content {
+    text-align: center;
+  }
+  
+  .footer {
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    background-color: #828282;
+    padding: 20px;
+    box-shadow: 0px 0px 30px 30px rgba(0, 0, 0, 0.871);
+    }
+    
+    #final-page {
+        background-color: #828282;
+        color: #000000;
+        text-align: center;
+        padding: 10px;
+    
+    }
+    
+    #final-page a {
+        color: #000000;
+        text-decoration: none;
+        border-bottom: 1px solid #000000;
+    }
+
+body.dark-mode {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.header.dark-mode {
+  background-color: #111111;
+  box-shadow: 0px 0px 48px 10px rgba(255, 255, 255, 0.255);
+}
+
+.footer.dark-mode {
+  background-color: #111111;
+  box-shadow: 0px 0px 48px 10px rgba(255, 255, 255, 0.255);
+}
+
+.content.dark-mode {
+  color: #ffffff;
+}
+
+.toggle__fill.dark-mode {
+  position: relative;
+  width: var(--width);
+  height: var(--height);
+  border-radius: var(--border-radius);
+  background: #ffffff;
+  transition: background 0.2s;
+  box-shadow: 0px 0px 20px 3px rgba(255, 255, 255, 0.557);
+}
+
+.toggle__fill.dark-mode::after {
+  content: url(/assets/SPR_Sun.png);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: var(--height);
+  width: var(--height);
+  background: #ebebeb;
+  box-shadow: 0px 0px 20px 1px rgba(255, 255, 255, 0.919);
+  border-radius: var(--border-radius);
+  transition: transform 0.2s;
+}
+
+
+#final-page.dark-mode {
+  background-color: #111111;
+  color: #ffffff;
+  text-align: center;
+  padding: 10px;
+
+}
+
+#final-page.dark-mode a {
+  color: #ffffff;
+  text-decoration: none;
+  border-bottom: 1px solid #ffffff;
+}
