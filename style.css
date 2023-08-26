@@ -53,7 +53,7 @@ body {
   }
   
   .toggle__fill::after {
-    content: url(/assets/SPR_Sun.png);
+    content: url(assets/SPR_Sun.png);
     position: absolute;
     top: 0;
     left: 0;
@@ -70,7 +70,7 @@ body {
   }
   
   .toggle__input:checked ~ .toggle__fill::after {
-    content: url(/assets/SPR_Moon.png);
+    content: url(assets/SPR_Moon.png);
     transform: translateX(var(--height));
   }
 
@@ -131,7 +131,7 @@ body.dark-mode {
 }
 
 .toggle__fill.dark-mode::after {
-  content: url(/assets/SPR_Sun.png);
+  content: url(assets/SPR_Sun.png);
   position: absolute;
   top: 0;
   left: 0;
